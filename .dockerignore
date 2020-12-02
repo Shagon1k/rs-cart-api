@@ -1,0 +1,11 @@
+# Unnesessary src folders, will be installed\build inside image
+/node_modules/
+/dist
+# Test-related files not necessary
+/test
+*.spec.ts
+# Development-related files not necessary
+.eslintrc.js
+.gitignore
+.prettierrc
+README.ms
