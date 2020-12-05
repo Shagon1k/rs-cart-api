@@ -1,22 +1,18 @@
-# Base setup
+# Base node image
 FROM node:12-alpine AS base
 WORKDIR /app
 
 # Dependencies
+FROM base AS dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm install && npm cache clean --force
 
-# Build
-WORKDIR /app
-COPY . .
+# Copy filed and build
+FROM dependencies AS build
+COPY . /app
 RUN npm run build
 
-# Start app
-FROM node:12-alpine AS application
-
-COPY --from=base /app/package*.json ./
-RUN npm install --only=production && npm cache clean --force
-COPY --from=base /app/dist ./dist
+WORKDIR /app
 
 USER node
 EXPOSE 8080
