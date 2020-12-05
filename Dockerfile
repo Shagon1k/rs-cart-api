@@ -9,7 +9,8 @@ RUN npm install && npm cache clean --force
 
 # Copy filed and build
 FROM dependencies AS build
-COPY . /app
+WORKDIR /app
+COPY . .
 RUN npm run build
 
 WORKDIR /app
