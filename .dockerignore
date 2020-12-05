@@ -8,4 +8,10 @@
 .eslintrc.js
 .gitignore
 .prettierrc
-README.ms
+README.ms# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore

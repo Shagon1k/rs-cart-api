@@ -18,4 +18,4 @@ WORKDIR /app
 USER node
 EXPOSE 80
 
-CMD ["npm run", "start" ]
+CMD ["npm", "run", "start"]
