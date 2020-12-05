@@ -18,4 +18,4 @@ WORKDIR /app
 USER node
 EXPOSE 8080
 
-ENTRYPOINT ["npm", "run", "start"]
+CMD ["node", "dist/main.js"]
