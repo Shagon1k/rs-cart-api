@@ -16,6 +16,6 @@ RUN npm run build
 WORKDIR /app
 
 USER node
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["npm run", "start" ]
